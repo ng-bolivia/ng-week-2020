@@ -1,0 +1,20 @@
+{
+  "name": "ng-week-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ng-bolivia/ng-week-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ng-bolivia/ng-week-2020/issues"
+  },
+  "homepage": "https://github.com/ng-bolivia/ng-week-2020#readme"
+}
