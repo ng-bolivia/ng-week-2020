@@ -1,32 +1,70 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Angular Performance Week</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html class="no-js" lang="es">
 
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
-    <!-- Place favicon.ico in the root directory -->
+<head>
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/themify-icons.css" />
-    <link rel="stylesheet" href="css/nice-select.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/slicknav.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-  </head>
+  <title>Angular Performance Week</title>
 
-  <body>
-    <!--[if lte IE 9]>
+  <!-- General -->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="NG Bolivia" />
+  <meta name="description"
+    content="Un evento organizado por la comunidad de Angular Bolivia orientado a lograr y analizar las mejores prácticas para lograr aplicaciones en Angular de alto rendimiento." />
+  <meta name="keywords" content="Angular, ng, bundle, week, pwa, performance, conferencia, Bolivia" />
+
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons//favicon-16x16.png">
+  <link rel="manifest" href="img/favicons//site.webmanifest">
+  <link rel="mask-icon" href="img/favicons//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Facebook -->
+  <meta property="og:title" content="Angular Performance Week">
+  <meta property="og:description"
+    content="Un evento organizado por la comunidad de Angular Bolivia orientado a lograr y analizar las mejores prácticas para lograr aplicaciones en Angular de alto rendimiento.">
+  <meta property="og:image"
+    content="https://firebasestorage.googleapis.com/v0/b/ng-week-b0966.appspot.com/o/logo-ng-bo.png?alt=media&token=25121573-79b3-49e5-911d-c44a23757ab9">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://performance.ng-bolivia.org">
+  <meta property="og:site_name" content="Angular Performance Week" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_BO" />
+
+  <!-- Twitter -->
+  <meta name="twitter:title" content="Angular Performance Week">
+  <meta name="twitter:description"
+    content=" Un evento organizado por la comunidad de Angular Bolivia orientado a lograr y analizar las mejores prácticas para lograr aplicaciones en Angular de alto rendimiento.">
+  <meta name="twitter:image"
+    content="https://firebasestorage.googleapis.com/v0/b/ng-week-b0966.appspot.com/o/logo-ng-bo.png?alt=media&token=25121573-79b3-49e5-911d-c44a23757ab9">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" /> -->
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/themify-icons.css" />
+  <link rel="stylesheet" href="css/nice-select.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/slicknav.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+  <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
         <a href="https://browsehappy.com/">upgrade your browser</a> to improve
@@ -34,457 +72,434 @@
       </p>
     <![endif]-->
 
-    <!-- header-start -->
-    <header>
-      <div class="header-area">
-        <div id="sticky-header" class="main-header-area">
-          <div class="container-fluid p-0">
-            <div
-              class="row align-items-center justify-content-between no-gutters"
-            >
-              <div class="col-xl-2 col-lg-2"></div>
-              <div class="col-xl-10 col-lg-10">
-                <div class="main-menu d-none d-lg-block">
-                  <nav>
-                    <ul id="navigation">
-                      <li><a href="#top">Inicio</a></li>
-                      <li><a href="#about">¿Qué es?</a></li>
-                      <li><a href="#schedule">Agenda</a></li>
-                      <li><a href="#speakers">Conferencistas</a></li>
-                      <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mobile_menu d-block d-lg-none"></div>
+  <!-- header-start -->
+  <header>
+    <div class="header-area">
+      <div id="sticky-header" class="main-header-area">
+        <div class="container-fluid p-0">
+          <div class="row align-items-center justify-content-between no-gutters">
+            <div class="col-xl-2 col-lg-2"></div>
+            <div class="col-xl-10 col-lg-10">
+              <div class="main-menu d-none d-lg-block">
+                <nav>
+                  <ul id="navigation">
+                    <li><a href="#top">Inicio</a></li>
+                    <li><a href="#about">¿Qué es?</a></li>
+                    <li><a href="#schedule">Agenda</a></li>
+                    <li><a href="#speakers">Conferencistas</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                  </ul>
+                </nav>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <div class="slider_area slider_bg_1" id="top">
-      <div class="slider_text">
-        <div class="container">
-          <div class="position_relv">
-            <h1 class="opcity_text d-none d-lg-block">CONFIRENCE</h1>
-            <div class="row">
-              <div class="col-xl-9">
-                <div class="title_text">
-                  <h3>
-                    Angular <br />
-                    Perfomance <br />
-                    Week 2020
-                  </h3>
-                  <a href="#schedule" class="boxed-btn-white">Ver agenda</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="countDOwn_area">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-4 col-md-6 col-lg-4">
-              <div class="single_date">
-                <i class="ti-location-pin"></i>
-                <span>Evento Online vía Youtube</span>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-lg-3">
-              <div class="single_date">
-                <i class="ti-alarm-clock"></i>
-                <span>21,22 y 23 de Mayo</span>
-              </div>
-            </div>
-
-            <div class="col-xl-5 col-md-12 col-lg-5">
-              <span id="clock"></span>
+            <div class="col-12">
+              <div class="mobile_menu d-block d-lg-none"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- slider_area_end -->
+  </header>
+  <!-- header-end -->
 
-    <!-- about_area_start -->
-    <div class="about_area" id="about">
-      <div class="shape-1 d-none d-xl-block">
-        <img src="img/about/shap1.png" alt="" />
-      </div>
-      <div class="shape-2 d-none d-xl-block">
-        <img src="img/about/shap2.png" alt="" />
-      </div>
+  <!-- slider_area_start -->
+  <div class="slider_area slider_bg_1" id="top">
+    <div class="slider_text">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-xl-6 col-md-6">
-            <div class="about_thumb">
-              <img src="img/conf.jpg" alt="" />
-            </div>
-          </div>
-          <div class="col-xl-5 offset-xl-1 col-md-6">
-            <div class="about_info">
-              <div class="section_title">
-                <span class="sub_heading">Bienvenido a</span>
+        <div class="position_relv">
+          <h1 class="opcity_text d-none d-lg-block">CONFERENCE</h1>
+          <div class="row">
+            <div class="col-xl-9">
+              <div class="title_text">
                 <h3>
                   Angular <br />
-                  Perfomance <br />
+                  Performance <br />
                   Week 2020
                 </h3>
+                <a href="#schedule" class="boxed-btn-white">Ver agenda</a>
               </div>
-              <p>
-                Un evento organizado por la comunidad de Angular Bolivia orientado a lograr y analizar las mejores prácticas
-                para lograr aplicaciones en Angular de alto rendimiento.
-              </p>
-              <a href="#schedule" class="boxed-btn-red">Agenda</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- about_area_end -->
 
-    <!-- event_area_start -->
-    <div class="event_area" id="schedule">
+    <div class="countDOwn_area">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="serction_title_large mb-95">
+        <div class="row align-items-center">
+          <div class="col-xl-4 col-md-6 col-lg-4">
+            <div class="single_date">
+              <i class="ti-location-pin"></i>
+              <span>Evento Online vía YouTube</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-lg-3">
+            <div class="single_date">
+              <i class="ti-alarm-clock"></i>
+              <span>21,22 y 23 de Mayo</span>
+            </div>
+          </div>
+
+          <div class="col-xl-5 col-md-12 col-lg-5">
+            <span id="clock"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slider_area_end -->
+
+  <!-- about_area_start -->
+  <div class="about_area" id="about">
+    <div class="shape-1 d-none d-xl-block">
+      <img src="img/about/shap1.png" alt="" />
+    </div>
+    <div class="shape-2 d-none d-xl-block">
+      <img src="img/about/shap2.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-md-6">
+          <div class="about_thumb">
+            <img src="img/conf.jpg" alt="" />
+          </div>
+        </div>
+        <div class="col-xl-5 offset-xl-1 col-md-6">
+          <div class="about_info">
+            <div class="section_title">
+              <span class="sub_heading">Bienvenido a</span>
               <h3>
-                Agenda
+                Angular <br />
+                Performance <br />
+                Week 2020
               </h3>
             </div>
+            <p>
+              Un evento organizado por la comunidad de Angular Bolivia orientado a lograr y analizar las mejores
+              prácticas
+              para lograr aplicaciones en Angular de alto rendimiento.
+            </p>
+            <a href="#schedule" class="boxed-btn-red">Agenda</a>
           </div>
         </div>
-        <div>
-          <div class="row">
-            <div class="col-xl-3 col-lg-3">
-              <div class="date">
-                <h3>Día 1: 20 de Mayo 2020 (Jueves)</h3>
-              </div>
-            </div>
-            <div class="col-xl-9 col-lg-9">
-              <div class="single_speaker">
-                <img width="90" height="90" src="img/speakers/nicobytes_cropped.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Keynote</span>
-                    <div class="time">
-                      7pm-7:10pm
-                    </div>
-                  </div>
-                  <p>
-                    Angular Performance Week el primer evento online acerca de rendimiento en Angular y en está primer charla vamos a ver conceptos clave y la didactica de esta conferencia online.
-                  </p>
-                </div>
-              </div>
-              <div class="single_speaker">
-                <img width="90" height="90" src="img/speakers/mariagarciaflores_cropped.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Route-level code splitting</span>
-                    <div class="time">
-                      7:10pm - 7:40pm
-                    </div>
-                  </div>
-                  <p>
-                    Por defecto, los NgModules son cargados de forma temprana,
-                    esto significa que tan pronto la app es cargada estos
-                    módulos también son cargados sin importar si o son o no
-                    necesarios. Para aplicaciones grandes y con muchas rutas se
-                    debe considerar cargar estos módulos usando la técnica de
-                    Lazy Loading este patrón carga los módulos cuando son
-                    necesarios ayudando a bajar los tiempos de carga. En esta
-                    charla aprenderás cómo lograrlo.
-                  </p>
-                </div>
-              </div>
-              <div class="single_speaker">
-                <img width="90" height="90" src="img/speakers/combimauri_cropped.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Analizando en Bundle Size</span>
-                    <div class="time">
-                      7:40pm - 8:10pm
-                    </div>
-                  </div>
-                  <p>
-                    Analizar el tamaño de nuestras aplicaciones es importante
-                    para ver oportunidades de mejora y de esta manera hacer que
-                    nuestro sitio cargue más rápido. En esta charla vamos a ver
-                    algunas técnicas y herramientas para analizar el peso de la
-                    aplicación.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="double_line">
-          <div class="row">
-            <div class="col-xl-3 col-lg-3">
-              <div class="date">
-                <h3>Día 2: 21 de Mayo 2020 (Viernes)</h3>
-              </div>
-            </div>
-            <div class="col-xl-9 col-lg-9">
-              <div class="single_speaker">
-                <img src="img/speakers/seaker4.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Optimiza el Change detection</span>
-                    <div class="time">
-                      7:10pm - 7:40pm
-                    </div>
-                  </div>
-                  <p>
-                    La forma de detección de cambios en Angular puede producir
-                    varios re procesos al momento de mostrar los datos en el
-                    template, una forma de optimizar esto es hacer que los
-                    componentes de Angular sean tipo OnPush y aplicar una
-                    arquitectura de Smart and Dumb Components.
-                  </p>
-                </div>
-              </div>
-              <div class="single_speaker">
-                <img src="img/speakers/seaker5.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Técnica de Memoization en pipes</span>
-                    <div class="time">
-                      7:40pm - 8:10pm
-                    </div>
-                  </div>
-                  <p>
-                    Esta técnica se usa para bajar el numero de cómputos de una
-                    función, se trata de que si una función recibe los mismos
-                    parámetros guarde en memoria los resultados así cuando se
-                    vuelva a llamar no tiene que calcular el resultado de nuevo,
-                    está técnica es genial para funciones recursivas y las
-                    podemos aplicar a los pipes de Angular.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about_area_end -->
 
-        <div class="double_line">
-          <div class="row">
-            <div class="col-xl-3 col-lg-3">
-              <div class="date">
-                <h3>Día 3: 22 de Mayo 2020 (Sábado)</h3>
+  <!-- event_area_start -->
+  <div class="event_area" id="schedule">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="serction_title_large mb-95">
+            <h3>
+              Agenda
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-3">
+            <div class="date">
+              <h3>Día 1: 21 de Mayo 2020 (Jueves)</h3>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9">
+            <div class="single_speaker">
+              <img width="90" height="90" src="img/speakers/nicobytes_cropped.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Keynote</span>
+                  <div class="time">
+                    7pm-7:10pm
+                  </div>
+                </div>
+                <p>
+                  Angular Performance Week, el primer evento online acerca del rendimiento en Angular. En esta primera
+                  charla vamos a ver conceptos clave y la didáctica de esta conferencia online.
+                </p>
               </div>
             </div>
-            <div class="col-xl-9 col-lg-9">
-              <div class="single_speaker">
-                <img src="img/speakers/json_alzate_cropped.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Server Side Rendering</span>
-                    <div class="time">
-                      7:10pm - 7:40pm
-                    </div>
+            <div class="single_speaker">
+              <img width="90" height="90" src="img/speakers/mariagarciaflores_cropped.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Route-level code splitting</span>
+                  <div class="time">
+                    7:10pm - 7:40pm
                   </div>
-                  <p>
-                    ¿Renderizar del lado del servidor o dejar que el cliente lo
-                    haga? Y si hacemos las dos, en esta charla podrás ver cómo
-                    aplicar la técnica de SSR con Angular Universal así
-                    optimizar los tiempos de carga y el SEO de la aplicación.
-                  </p>
                 </div>
+                <p>
+                  Por defecto, los NgModules son cargados de forma temprana, esto significa que tan pronto la app es
+                  cargada. Estos módulos también son cargados sin importar si son o no necesarios. Para aplicaciones
+                  grandes y con muchas rutas se debe considerar cargar estos módulos usando la técnica de Lazy Loading.
+                  Este patrón carga los módulos cuando son necesarios ayudando a bajar los tiempos de carga. En esta
+                  charla aprenderás cómo lograrlo.
+                </p>
               </div>
-              <div class="single_speaker">
-                <img width="90" height="90" src="img/speakers/lizzymendivil_cropped.png" alt="" />
-                <div class="speaker-name">
-                  <div
-                    class="heading d-flex justify-content-between align-items-center"
-                  >
-                    <span>Implementando PWA</span>
-                    <div class="time">
-                      7:40pm - 8:10pm
-                    </div>
+            </div>
+            <div class="single_speaker">
+              <img width="90" height="90" src="img/speakers/combimauri_cropped.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Analizando en Bundle Size</span>
+                  <div class="time">
+                    7:40pm - 8:10pm
                   </div>
-                  <p>
-                    Notificaciones tipo push, soporte de data offline, services
-                    workers, cache de datos y archivos todo esto y mucho más
-                    puedes lograr implementando las características de una
-                    aplicación web progresiva, en esta charla vamos a ver cómo
-                    aplicarlo en Angular.
-                  </p>
                 </div>
+                <p>
+                  Analizar el tamaño de nuestras aplicaciones es importante
+                  para ver oportunidades de mejora y de esta manera hacer que
+                  nuestro sitio cargue más rápido. En esta charla vamos a ver
+                  algunas técnicas y herramientas para analizar el peso de la
+                  aplicación.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="double_line">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3">
+            <div class="date">
+              <h3>Día 2: 22 de Mayo 2020 (Viernes)</h3>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9">
+            <div class="single_speaker">
+              <img src="img/speakers/seaker4.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Optimiza el Change detection</span>
+                  <div class="time">
+                    7:10pm - 7:40pm
+                  </div>
+                </div>
+                <p>
+                  La forma de detección de cambios en Angular puede producir varios reprocesos al momento de mostrar los
+                  datos en el template. Una forma de optimizar esto es hacer que los componentes de Angular sean tipo
+                  OnPush y aplicar una arquitectura de Smart and Dumb Components.
+                </p>
+              </div>
+            </div>
+            <div class="single_speaker">
+              <img src="img/speakers/seaker5.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Técnica de Memoization en pipes</span>
+                  <div class="time">
+                    7:40pm - 8:10pm
+                  </div>
+                </div>
+                <p>
+                  Esta técnica se usa para bajar el número de cómputos de una función, se trata de que si una función
+                  recibe los mismos parámetros guarde en memoria los resultados así cuando se vuelva a llamar no tiene
+                  que calcular el resultado de nuevo, esta técnica es genial para funciones recursivas y las podemos
+                  aplicar a los pipes de Angular.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="double_line">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3">
+            <div class="date">
+              <h3>Día 3: 23 de Mayo 2020 (Sábado)</h3>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9">
+            <div class="single_speaker">
+              <img src="img/speakers/json_alzate_cropped.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Server Side Rendering</span>
+                  <div class="time">
+                    7:10pm - 7:40pm
+                  </div>
+                </div>
+                <p>
+                  ¿Renderizar del lado del servidor o dejar que el cliente lo haga? Y si hacemos las dos, en esta charla
+                  podrás ver cómo aplicar la técnica de SSR con Angular Universal y así optimizar los tiempos de carga y
+                  el SEO de la aplicación.
+                </p>
+              </div>
+            </div>
+            <div class="single_speaker">
+              <img width="90" height="90" src="img/speakers/lizzymendivil_cropped.png" alt="" />
+              <div class="speaker-name">
+                <div class="heading d-flex justify-content-between align-items-center">
+                  <span>Implementando PWA</span>
+                  <div class="time">
+                    7:40pm - 8:10pm
+                  </div>
+                </div>
+                <p>
+                  Notificaciones tipo push, soporte de data offline, services workers, caché de datos y archivos todo
+                  esto y mucho más puedes lograr implementando las características de una aplicación web progresiva, en
+                  esta charla vamos a ver cómo aplicarlo en Angular.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- event_area_end -->
+  </div>
+  <!-- event_area_end -->
 
-    <!-- speakers_start -->
-    <div class="speakers_area" id="speakers">
-      <h1 class="horizontal_text d-none d-lg-block">
-        Speakers
-      </h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="serction_title_large mb-95">
-              <h3>
-                Speakers
-              </h3>
+  <!-- speakers_start -->
+  <div class="speakers_area" id="speakers">
+    <h1 class="horizontal_text d-none d-lg-block">
+      Speakers
+    </h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="serction_title_large mb-95">
+            <h3>
+              Speakers
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-5 col-md-6">
+          <div class="single_speaker">
+            <div class="speaker_thumb">
+              <img src="img/speakers/nicobytes.jpg" alt="" />
+              <div class="hover_overlay">
+                <div class="social_icon">
+                  <a href="https://twitter.com/nicobytes" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/nicobytes"><i class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="speaker_name text-center">
+              <h3>Nicolas Molina</h3>
+              <p>Google Developer Expert</p>
+            </div>
+          </div>
+          <div class="single_speaker">
+            <div class="speaker_thumb">
+              <img src="img/speakers/mariagarciaflores.jpg" alt="" />
+              <div class="hover_overlay">
+                <div class="social_icon">
+                  <a href="https://twitter.com/grissgarcia074" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/mariagarciaflores"><i class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="speaker_name text-center">
+              <h3>Maria Flores</h3>
+              <p>Product Designer</p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xl-5 col-md-6">
-            <div class="single_speaker">
-              <div class="speaker_thumb">
-                <img src="img/speakers/nicobytes.jpg" alt="" />
-                <div class="hover_overlay">
-                  <div class="social_icon">
-                    <a href="https://twitter.com/nicobytes" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/nicobytes"><i class="fa fa-github"></i></a>
-                  </div>
+        <div class="col-xl-5 offset-xl-2 col-md-6">
+          <div class="single_speaker">
+            <div class="speaker_thumb">
+              <img src="img/speakers/combimauri.jpeg" alt="" />
+              <div class="hover_overlay">
+                <div class="social_icon">
+                  <a href="https://twitter.com/combimauri" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/combimauri"><i class="fa fa-github"></i></a>
                 </div>
-              </div>
-              <div class="speaker_name text-center">
-                <h3>Nicolas Molina</h3>
-                <p>Google Developer Expert</p>
               </div>
             </div>
-            <div class="single_speaker">
-              <div class="speaker_thumb">
-                <img src="img/speakers/mariagarciaflores.jpg" alt="" />
-                <div class="hover_overlay">
-                  <div class="social_icon">
-                    <a href="https://twitter.com/grissgarcia074" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/mariagarciaflores"><i class="fa fa-github"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="speaker_name text-center">
-                <h3>Maria Flores</h3>
-                <p>Product Designer</p>
-              </div>
+            <div class="speaker_name text-center">
+              <h3>Mauricio Arce</h3>
+              <p>UI/UX Designer</p>
             </div>
           </div>
-          <div class="col-xl-5 offset-xl-2 col-md-6">
-            <div class="single_speaker">
-              <div class="speaker_thumb">
-                <img src="img/speakers/combimauri.jpeg" alt="" />
-                <div class="hover_overlay">
-                  <div class="social_icon">
-                    <a href="https://twitter.com/combimauri" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/combimauri"><i class="fa fa-github"></i></a>
-                  </div>
+          <div class="single_speaker">
+            <div class="speaker_thumb">
+              <img src="img/speakers/lizzymendivil.jpg" alt="" />
+              <div class="hover_overlay">
+                <div class="social_icon">
+                  <a href="https://twitter.com/lizzymendivil" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/lizzymendivil"><i class="fa fa-github"></i></a>
                 </div>
-              </div>
-              <div class="speaker_name text-center">
-                <h3>Mauricio Arce</h3>
-                <p>UI/UX Designer</p>
               </div>
             </div>
-            <div class="single_speaker">
-              <div class="speaker_thumb">
-                <img src="img/speakers/lizzymendivil.jpg" alt="" />
-                <div class="hover_overlay">
-                  <div class="social_icon">
-                    <a href="https://twitter.com/lizzymendivil" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/lizzymendivil"><i class="fa fa-github"></i></a>
-                  </div>
+            <div class="speaker_name text-center">
+              <h3>Lizzy Mendivil</h3>
+              <p>Art Director</p>
+            </div>
+          </div>
+          <div class="single_speaker">
+            <div class="speaker_thumb">
+              <img src="img/speakers/json_alzate.jpg" alt="" />
+              <div class="hover_overlay">
+                <div class="social_icon">
+                  <a href="https://twitter.com/json_alzate" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/developerjaag"><i class="fa fa-github"></i></a>
                 </div>
-              </div>
-              <div class="speaker_name text-center">
-                <h3>Lizzy Mendivil</h3>
-                <p>Art Director</p>
               </div>
             </div>
-            <div class="single_speaker">
-              <div class="speaker_thumb">
-                <img src="img/speakers/json_alzate.jpg" alt="" />
-                <div class="hover_overlay">
-                  <div class="social_icon">
-                    <a href="https://twitter.com/json_alzate" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/developerjaag"><i class="fa fa-github"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="speaker_name text-center">
-                <h3>Jheison Alzate</h3>
-                <p>Art Director</p>
-              </div>
+            <div class="speaker_name text-center">
+              <h3>Jheison Alzate</h3>
+              <p>Art Director</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- speakers_end-->
+  </div>
+  <!-- speakers_end-->
 
-    <!-- resister_book_start -->
-    <div class="resister_book resister_bg_1">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="resister_text text-center">
-              <h3>
-                Register Now to Book <br />
-                Your Presence
-              </h3>
-              <a href="#" class="boxed-btn-white">Book Now ($150) </a>
-            </div>
+  <!-- resister_book_start -->
+  <div class="resister_book resister_bg_1">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="resister_text text-center">
+            <h3>
+              Register Now to Book <br />
+              Your Presence
+            </h3>
+            <a href="#" class="boxed-btn-white">Book Now ($150) </a>
           </div>
         </div>
       </div>
     </div>
-    <!-- resister_book_end -->
+  </div>
+  <!-- resister_book_end -->
 
 
-    <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/plugins.js"></script>
+  <!-- JS here -->
+  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/ajax-form.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/scrollIt.js"></script>
+  <script src="js/jquery.scrollUp.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/nice-select.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.countdown.js"></script>
+  <script src="js/plugins.js"></script>
 
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+  <!--contact js-->
+  <script src="js/contact.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/jquery.form.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/mail-script.js"></script>
 
-    <script src="js/main.js"></script>
-  </body>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
