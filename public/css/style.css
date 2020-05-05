@@ -2164,6 +2164,12 @@ h3 {
   margin-bottom: 63px;
 }
 
+.event_area .single_speaker img {
+  max-width: 100%;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
 @media (max-width: 767px) {
   /* line 72, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_event.scss */
   .event_area .single_speaker {
