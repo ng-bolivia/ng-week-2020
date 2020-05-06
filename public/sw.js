@@ -1,30 +1,21 @@
 const CACHE_STATIC_NAME = 'static-v1';
 const CACHE_DYNAMIC_NAME = 'dynamic-v1';
-const CACHE_INMUTABLE_NAME = 'inmutable-v1';
 
-const CACHE_DYNAMIC_LIMIT = 50;
+const CACHE_DYNAMIC_LIMIT = 100;
 
 
 function clearCache(cacheName, numberItems) {
+    caches.open(cacheName).then(cache => {
+        return cache.keys()
+            .then(keys => {
 
-
-    caches.open(cacheName)
-        .then(cache => {
-
-            return cache.keys()
-                .then(keys => {
-
-                    if (keys.length > numberItems) {
-                        cache.delete(keys[0])
-                            .then(clearCache(cacheName, numberItems));
-                    }
-                });
-
-
-        });
+                if (keys.length > numberItems) {
+                    cache.delete(keys[0])
+                        .then(clearCache(cacheName, numberItems));
+                }
+            });
+    });
 }
-
-
 
 
 self.addEventListener('install', e => {
@@ -35,6 +26,8 @@ self.addEventListener('install', e => {
         return cache.addAll([
             '/',
             '/index.html',
+            '/404.html',
+            '/offline.html',
 
             '/img/about/shap1.png',
             '/img/about/shap2.png',
@@ -136,59 +129,29 @@ self.addEventListener('install', e => {
 
 
 self.addEventListener('activate', e => {
-
-
     const response = caches.keys().then(keys => {
-
         keys.forEach(key => {
-
-            // static-v4
             if (key !== CACHE_STATIC_NAME && key.includes('static')) {
                 return caches.delete(key);
             }
-
         });
-
     });
-
-
-
     e.waitUntil(response);
-
 });
-
-
-
-
 
 self.addEventListener('fetch', e => {
 
-
-    // Cache with Network Fallback
-    const respuesta = caches.match(e.request).then(res => {
-
-        if (res) return res;
-
-        return fetch(e.request).then(newResp => {
-
-            caches.open(CACHE_DYNAMIC_NAME).then(cache => {
-                    cache.put(e.request, newResp);
-                    clearCache(CACHE_DYNAMIC_NAME, 50);
-                });
-
-            return newResp.clone();
-        }).catch(err => {
-
-            if (e.request.headers.get('accept').includes('text/html')) {
-                return caches.match('/offline.html');
-            }
-
+    // Network with cache fallback
+    const respuesta = fetch(e.request).then(res => {
+        if (!res) return caches.match(e.request);
+        caches.open(CACHE_DYNAMIC_NAME).then(cache => {
+            cache.put(e.request, res);
+            clearCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
         });
-
-
+        return res.clone();
+    }).catch(() => {
+        return caches.match(e.request);
     });
-
     e.respondWith(respuesta);
-
 
 });
