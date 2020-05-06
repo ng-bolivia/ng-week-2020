@@ -2369,14 +2369,14 @@ h3 {
 }
 
 /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
-.footer .footer_top .footer_widget .newsletter_form {
+.newsletter_form {
   position: relative;
   margin-bottom: 20px;
 }
 
 /* line 100, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
-.footer .footer_top .footer_widget .newsletter_form input {
-  width: 100%;
+.newsletter_form input {
+  width: 50%;
   height: 45px;
   background: #fff;
   padding-left: 20px;
@@ -2386,13 +2386,13 @@ h3 {
 }
 
 /* line 108, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
-.footer .footer_top .footer_widget .newsletter_form input::placeholder {
+.newsletter_form input::placeholder {
   font-size: 16px;
   color: #fff;
 }
 
 /* line 113, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
-.footer .footer_top .footer_widget .newsletter_form button {
+.newsletter_form button {
   position: absolute;
   top: 0;
   right: 0;
