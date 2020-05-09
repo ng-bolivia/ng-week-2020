@@ -50,23 +50,32 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!-- CSS here -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
+    as="style" onload="this.rel='stylesheet'">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
   <!-- <link rel="stylesheet" href="css/owl.carousel.min.css" /> -->
   <!-- <link rel="stylesheet" href="css/magnific-popup.css" /> -->
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <!-- <link rel="stylesheet" href="css/themify-icons.css" /> -->
+  <link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'" />
+  <link rel="preload" href="css/themify-icons.css" as="style" onload="this.rel='stylesheet'" />
   <!-- <link rel="stylesheet" href="css/nice-select.css" /> -->
-  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="preload" href="css/flaticon.css" as="style" onload="this.rel='stylesheet'" />
   <!-- <link rel="stylesheet" href="css/animate.css" /> -->
-  <link rel="stylesheet" href="css/slicknav.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="css/slicknav.css" as="style" onload="this.rel='stylesheet'" />
+  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'" />
 
-  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+  <link rel="preload" href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" as="style"
+    onload="this.rel='stylesheet'">
+  <style type="text/css">
+    #mc_embed_signup {
+      clear: left;
+      font: 14px Helvetica, Arial, sans-serif;
+      width: 100%;
+    }
+
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+  </style>
 
   <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -173,7 +182,11 @@
       <div class="row align-items-center">
         <div class="col-xl-6 col-md-6">
           <div class="about_thumb">
-            <img src="img/conf.png" alt="conf" />
+            <picture>
+              <source type="image/webp" srcset="img/conf.webp">
+              <source type="image/png" srcset="img/conf.png">
+              <img src="img/conf.png" alt="conf" />
+            </picture>
           </div>
         </div>
         <div class="col-xl-5 offset-xl-1 col-md-6">
@@ -403,11 +416,18 @@
         <div class="col-xl-5 col-md-6">
           <div class="single_speaker">
             <div class="speaker_thumb">
-              <img src="img/speakers/luixaviles.png" alt="luixaviles" />
+              <picture>
+                <source type="image/webp" srcset="img/speakers/luixaviles.webp">
+                <source type="image/png" srcset="img/speakers/luixaviles.png">
+                <img src="img/speakers/luixaviles.png" alt="luixaviles" />
+              </picture>
+
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/luixaviles" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/luixaviles"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/luixaviles" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter" aria-label="twitter"></i></a>
+                  <a href="https://github.com/luixaviles" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -422,8 +442,10 @@
               <img src="img/speakers/mariagarciaflores.jpg" alt="mariagarciaflores" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/grissgarcia074" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/mariagarciaflores"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/grissgarcia074" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/mariagarciaflores" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -438,8 +460,10 @@
               <img src="img/speakers/combimauri.jpeg" alt="combimauri" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/combimauri" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/combimauri"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/combimauri" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/combimauri" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -453,8 +477,10 @@
               <img src="img/speakers/ircube.jpeg" alt="ircube" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/ircube" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/ircube"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/ircube" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/ircube" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -470,8 +496,10 @@
               <img src="img/speakers/nicobytes.jpg" alt="nicobytes" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/nicobytes" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/nicobytes"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/nicobytes" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/nicobytes" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -485,8 +513,10 @@
               <img src="img/speakers/lizzymendivil.jpg" alt="lizzymendivil" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/lizzymendivil" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/lizzymendivil"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/lizzymendivil" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/lizzymendivil" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -500,8 +530,10 @@
               <img src="img/speakers/json_alzate.jpg" alt="json_alzate" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/json_alzate" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/developerjaag"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/json_alzate" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/developerjaag" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -515,8 +547,10 @@
               <img src="img/speakers/dmeneses.jpg" alt="dmeneses" />
               <div class="hover_overlay">
                 <div class="social_icon">
-                  <a href="https://twitter.com/DAN_11290" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://github.com/dmeneses"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/DAN_11290" target="_blank" rel="noreferrer" aria-label="twitter"><i
+                      class="fa fa-twitter"></i></a>
+                  <a href="https://github.com/dmeneses" target="_blank" rel="noreferrer" aria-label="github"><i
+                      class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -538,17 +572,25 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="resister_text text-center">
-            <h3>
-              Dejanos tu email<br />
-              para recibir noticias del evento.
-            </h3>
+            <label for="mce-EMAIL">
+              <h3>
+                Dejanos tu email<br />
+                para recibir noticias del evento.
+              </h3>
+            </label>
             <div id="mc_embed_signup">
-              <form action="https://ng-bolivia.us18.list-manage.com/subscribe/post?u=c936d9c2d7735e2d92050aaea&amp;id=8a9443bf81" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <form
+                action="https://ng-bolivia.us18.list-manage.com/subscribe/post?u=c936d9c2d7735e2d92050aaea&amp;id=8a9443bf81"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" rel="noreferrer" novalidate>
                 <div id="mc_embed_signup_scroll">
-                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                  <input type="email" value="" name="mce-EMAIL" class="email" id="mce-EMAIL"
+                    placeholder="Tu correo electrónico" required>
                   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c936d9c2d7735e2d92050aaea_8a9443bf81" tabindex="-1" value=""></div>
-                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                      name="b_c936d9c2d7735e2d92050aaea_8a9443bf81" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                      class="button"></div>
                 </div>
               </form>
             </div>
@@ -561,6 +603,8 @@
 
 
   <!-- JS here -->
+
+  <script src="js/modernizr-custom.js"></script>
   <script src="js/vendor/modernizr-3.5.0.min.js"></script>
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/popper.min.js"></script>

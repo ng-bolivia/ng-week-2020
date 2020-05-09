@@ -32,11 +32,13 @@ self.addEventListener('install', e => {
             '/img/about/shap1.png',
             '/img/about/shap2.png',
             '/img/banner/banner_1.png',
+            '/img/banner/banner_1.webp',
             '/img/banner/footer_ball.png',
             '/img/banner/footer_bg_1.png',
             '/img/banner/path.png',
             '/img/banner/path2.png',
             '/img/banner/resister.png',
+            '/img/banner/resister.webp',
             '/img/favicons/android-chrome-192x192.png',
             '/img/favicons/android-chrome-256x256.png',
             '/img/favicons/apple-touch-icon.png',
@@ -59,11 +61,13 @@ self.addEventListener('install', e => {
             '/img/speakers/lizzymendivil.jpg',
             '/img/speakers/luixaviles_cropped.png',
             '/img/speakers/luixaviles.png',
+            '/img/speakers/luixaviles.webp',
             '/img/speakers/mariagarciaflores_cropped.png',
             '/img/speakers/mariagarciaflores.jpg',
             '/img/speakers/nicobytes_cropped.png',
             '/img/speakers/nicobytes.jpg',
             '/img/conf.png',
+            '/img/conf.webp',
             '/img/social-share.png',
 
             '/fonts/fa-brands-400.eot',
@@ -97,7 +101,8 @@ self.addEventListener('install', e => {
             '/fonts/themify.svg',
             '/fonts/themify.ttf',
             '/fonts/themify.woff',
-
+            
+            'js/modernizr-custom.js',
             'js/vendor/modernizr-3.5.0.min.js',
             'js/vendor/jquery-1.12.4.min.js',
             'js/popper.min.js',
@@ -113,9 +118,11 @@ self.addEventListener('install', e => {
 
             'css/bootstrap.min.css',
             'css/font-awesome.min.css',
+            'css/themify-icons.css',
             'css/flaticon.css',
             'css/slicknav.css',
-            'css/style.css'
+            'css/style.css',
+            'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
         ]);
 
 
